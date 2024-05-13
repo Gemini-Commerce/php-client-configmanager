@@ -1,11 +1,11 @@
 # GeminiCommerce\Configmanager\ConfigManagerApi
 
-All URIs are relative to http://localhost, except if the operation defines another base path.
+All URIs are relative to https://config-manager.api.gogemini.io, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**configManagerBulkSetConfigs()**](ConfigManagerApi.md#configManagerBulkSetConfigs) | **POST** /configmanager.ConfigManager/BulkSetConfigs |  |
-| [**configManagerGetConfig()**](ConfigManagerApi.md#configManagerGetConfig) | **POST** /configmanager.ConfigManager/GetConfig |  |
+| [**configManagerBulkSetConfigs()**](ConfigManagerApi.md#configManagerBulkSetConfigs) | **POST** /configmanager.ConfigManager/BulkSetConfigs | BulkSetConfigs |
+| [**configManagerGetConfig()**](ConfigManagerApi.md#configManagerGetConfig) | **POST** /configmanager.ConfigManager/GetConfig | GetConfig |
 | [**configManagerGetTenantIdByCode()**](ConfigManagerApi.md#configManagerGetTenantIdByCode) | **POST** /configmanager.ConfigManager/GetTenantIdByCode |  |
 
 
@@ -15,7 +15,9 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 configManagerBulkSetConfigs($body): object
 ```
 
+BulkSetConfigs
 
+Bulk set configs
 
 ### Example
 
@@ -24,11 +26,15 @@ configManagerBulkSetConfigs($body): object
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: standardAuthorization
+$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerBulkSetConfigsRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerBulkSetConfigsRequest
 
@@ -52,7 +58,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[standardAuthorization](../../README.md#standardAuthorization)
 
 ### HTTP request headers
 
@@ -69,7 +75,9 @@ No authorization required
 configManagerGetConfig($body): \GeminiCommerce\Configmanager\Model\ConfigmanagerConfigResponse
 ```
 
+GetConfig
 
+Get a config
 
 ### Example
 
@@ -78,11 +86,15 @@ configManagerGetConfig($body): \GeminiCommerce\Configmanager\Model\Configmanager
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure OAuth2 access token for authorization: standardAuthorization
+$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerGetConfigRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerGetConfigRequest
 
@@ -106,7 +118,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[standardAuthorization](../../README.md#standardAuthorization)
 
 ### HTTP request headers
 
@@ -132,11 +144,17 @@ configManagerGetTenantIdByCode($body): \GeminiCommerce\Configmanager\Model\Confi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: Authorization
+$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
 
 $apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeRequest
 
@@ -160,7 +178,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[Authorization](../../README.md#Authorization)
 
 ### HTTP request headers
 
