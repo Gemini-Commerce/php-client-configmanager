@@ -1,4 +1,4 @@
-# GeminiCommerce\Configmanager\ConfigManagerApi
+# OpenAPI\Client\ConfigManagerApi
 
 All URIs are relative to https://config-manager.api.gogemini.io, except if the operation defines another base path.
 
@@ -27,16 +27,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: standardAuthorization
-$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
+$apiInstance = new OpenAPI\Client\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerBulkSetConfigsRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerBulkSetConfigsRequest
+$body = new \OpenAPI\Client\Model\ConfigmanagerBulkSetConfigsRequest(); // \OpenAPI\Client\Model\ConfigmanagerBulkSetConfigsRequest
 
 try {
     $result = $apiInstance->configManagerBulkSetConfigs($body);
@@ -50,7 +50,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Configmanager\Model\ConfigmanagerBulkSetConfigsRequest**](../Model/ConfigmanagerBulkSetConfigsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ConfigmanagerBulkSetConfigsRequest**](../Model/ConfigmanagerBulkSetConfigsRequest.md)|  | |
 
 ### Return type
 
@@ -72,7 +72,7 @@ try {
 ## `configManagerGetConfig()`
 
 ```php
-configManagerGetConfig($body): \GeminiCommerce\Configmanager\Model\ConfigmanagerConfigResponse
+configManagerGetConfig($body): \OpenAPI\Client\Model\ConfigmanagerConfigResponse
 ```
 
 GetConfig
@@ -87,16 +87,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure OAuth2 access token for authorization: standardAuthorization
-$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
+$apiInstance = new OpenAPI\Client\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerGetConfigRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerGetConfigRequest
+$body = new \OpenAPI\Client\Model\ConfigmanagerGetConfigRequest(); // \OpenAPI\Client\Model\ConfigmanagerGetConfigRequest
 
 try {
     $result = $apiInstance->configManagerGetConfig($body);
@@ -110,11 +110,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Configmanager\Model\ConfigmanagerGetConfigRequest**](../Model/ConfigmanagerGetConfigRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ConfigmanagerGetConfigRequest**](../Model/ConfigmanagerGetConfigRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Configmanager\Model\ConfigmanagerConfigResponse**](../Model/ConfigmanagerConfigResponse.md)
+[**\OpenAPI\Client\Model\ConfigmanagerConfigResponse**](../Model/ConfigmanagerConfigResponse.md)
 
 ### Authorization
 
@@ -132,7 +132,7 @@ try {
 ## `configManagerGetTenantIdByCode()`
 
 ```php
-configManagerGetTenantIdByCode($body): \GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeResponse
+configManagerGetTenantIdByCode($body): \OpenAPI\Client\Model\ConfigmanagerGetTenantIdByCodeResponse
 ```
 
 
@@ -145,18 +145,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Configmanager\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Configmanager\Api\ConfigManagerApi(
+$apiInstance = new OpenAPI\Client\Api\ConfigManagerApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeRequest(); // \GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeRequest
+$body = new \OpenAPI\Client\Model\ConfigmanagerGetTenantIdByCodeRequest(); // \OpenAPI\Client\Model\ConfigmanagerGetTenantIdByCodeRequest
 
 try {
     $result = $apiInstance->configManagerGetTenantIdByCode($body);
@@ -170,11 +170,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeRequest**](../Model/ConfigmanagerGetTenantIdByCodeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ConfigmanagerGetTenantIdByCodeRequest**](../Model/ConfigmanagerGetTenantIdByCodeRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Configmanager\Model\ConfigmanagerGetTenantIdByCodeResponse**](../Model/ConfigmanagerGetTenantIdByCodeResponse.md)
+[**\OpenAPI\Client\Model\ConfigmanagerGetTenantIdByCodeResponse**](../Model/ConfigmanagerGetTenantIdByCodeResponse.md)
 
 ### Authorization
 

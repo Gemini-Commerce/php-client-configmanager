@@ -28,12 +28,3 @@ lib/Model/ProtobufAny.php
 lib/Model/RpcStatus.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/ConfigManagerApiTest.php
-test/Model/BulkSetConfigsRequestConfigTest.php
-test/Model/ConfigmanagerBulkSetConfigsRequestTest.php
-test/Model/ConfigmanagerConfigResponseTest.php
-test/Model/ConfigmanagerGetConfigRequestTest.php
-test/Model/ConfigmanagerGetTenantIdByCodeRequestTest.php
-test/Model/ConfigmanagerGetTenantIdByCodeResponseTest.php
-test/Model/ProtobufAnyTest.php
-test/Model/RpcStatusTest.php
